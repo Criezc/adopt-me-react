@@ -1,0 +1,53 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build --public-url ./dist/ src/index.html",
+    "start": "npm -s run build && babel-node server/index.js",
+    "clear-build-cache": "rm -rf .cache/ dist/",
+    "dev": "parcel src/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,jsx}\" --write",
+    "lint": "tslint --project",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "frisco",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.13",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/react": "^11.1.5",
+    "@frontendmasters/pet": "^1.0.3",
+    "@reach/router": "^1.3.4",
+    "@types/reach__router": "^1.3.7",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "cross-env": "^7.0.3",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "parcel": "^2.0.0-beta.1",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^5.0.0",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
